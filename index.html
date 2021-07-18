@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<head>
+    <title>Student List </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="classmate.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+  
+</head>
+<body>
+    <h1 style="text-align: center; color: rgb(3, 3, 3);">Computer Engineering Student List</h1>
+<table align="center" id="blur">
+    <colgroup>
+        <col style="width:10%; text-align: center;">
+        <col style="width: 60%;">
+        <col style="width: 30%;">
+    </colgroup>
+    <tr>
+        <th><b>No.</b></th>
+        <th><b>NAME</b></th>
+        <th></th> 
+    </tr>
+    <tr>
+        <td style="text-align: center;">1</td>
+        <td>Ruhi Shah</td>
+        <td><button onclick="details(1)">View Details</button></td>
+    </tr>
+    <tr>
+        <td style="text-align: center;">2</td>
+        <td>AAyushi Patel</td>
+        <td><button onclick="details(2)">View Details</button></td>
+    </tr>
+    <tr>
+        <td style="text-align: center;">3</td>
+        <td>Mahek Mittal</td>
+        <td><button onclick="details(3)">View Details</button></td>
+    </tr>
+    <tr>
+        <td style="text-align: center;">4</td>
+        <td>AArushi Patnaik</td>
+        <td><button onclick="details(4)">View Details</button></td>
+    </tr>
+    <tr>
+        <td style="text-align: center;">5</td>
+        <td>John Xavier</td>
+        <td><button onclick="details(5)">View Details</button></td>
+    </tr>
+    <tr>
+        <td style="text-align: center;">6</td>
+        <td>Raj Shah</td>
+        <td><button onclick="details(6)">View Details</button></td>
+    </tr>
+    <tr>
+        <td style="text-align: center;">7</td>
+        <td>Deep Patil</td>
+        <td><button onclick="details(7)">View Details</button></td>
+    </tr>
+   
+</table>
+<span class="details" id="1" style="display:none;">
+    <div class="det">
+       
+        <div class="p"style="margin-left: 40px; text-align: left;">
+            <h2>Ruhi Shah</h2>
+            <h3>Age: 20</h3>
+            <h3>CGPA:8.4</h3>
+            <button class="btn" onclick="off(1)">Back</button>
+        </div>
+    </div>
+</span>
+<span class="details" id="2" style="display:none;">
+    <div class="det">
+            <div class="p" style="margin-left: 40px; text-align: left;">
+            <h2>AAyushi Patel</h2>
+            <h3>Age: 20</h3>
+            <h3>Grade: 7.5 CGPA</h3>
+            <button class="btn" onclick="off(2)">Back</button>
+        </div>
+    </div>
+</span>
+<span class="details" id="3" style="display:none;">
+    <div class="det">
+        
+        <div class="p" style="margin-left: 40px; text-align: left;">
+            <h2>Mahek Mittal</h2>
+            <h3>Age: 20</h3>
+           
+            <h3>Grade: 9.93 CGPA</h3>
+            <button class="btn" onclick="off(3)">Back</button>
+        </div>
+    </div>
+</span>
+<span class="details" id="4" style="display:none;">
+    <div class="det">
+        
+        <div class="p" style="margin-left: 40px; text-align: left;">
+            <h2>AArushi Patnaik</h2>
+            <h3>Age: 20</h3>
+           
+            <h3>Grade: 6.74 CGPA</h3>
+            <button class="btn" onclick="off(4)">Back</button>
+        </div>
+    </div>
+</span>
+<span class="details" id="5" style="display:none;">
+    <div class="det">
+      
+        <div class="p" style="margin-left: 40px; text-align: left;">
+            <h2>John Xavier</h2>
+            <h3>Age: 20</h3>
+            
+            <h3>Grade: 7.43 CGPA</h3>
+            <button class="btn" onclick="off(5)">Back</button>
+        </div>
+    </div>
+</span>
+<span class="details" id="6" style="display:none;">
+    <div class="det">
+        <div><img style="object-fit: cover;" src="./images/joseph-gonzalez-iFgRcqHznqg-unsplash.jpg"></div>
+        <div class="p" style="margin-left: 40px; text-align: left;">
+            <h2>Raj Shah</h2>
+            <h3>Age: 20</h3>
+            
+            <h3>Grade: 8 CGPA</h3>
+            <button class="btn" onclick="off(6)">Back</button>
+        </div>
+    </div>
+</span>
+<span class="details" id="7" style="display:none;">
+    <div class="det">
+       
+        <div class="p" style="margin-left: 40px; text-align: left;">
+            <h2>Deep Patil</h2>
+            <h3>Age: 20</h3>
+            
+            <h3>Grade: 8.8 CGPA</h3>
+            <button class="btn" onclick="off(7)">Back</button>
+        </div>
+    </div>
+</span>
+
+<script type="text/javascript">
+       
+    function details() {
+        var x = document.getElementById(arguments[0]);
+        var y = document.getElementById('blur');
+            if (x.style.display === "none") {
+                x.style.display = "block";
+                y.style.opacity=0.2;
+                x.style.opactiy=1;
+            }
+            else {
+                x.style.display = "none";
+                y.style.opacity=1;
+            }       
+
+        }
+    function off(){
+        var x = document.getElementById(arguments[0]);
+        var y = document.getElementById('blur');
+        x.style.display = "none";
+        y.style.opacity=1;
+    }
+</script>
+</body>
+</html>
